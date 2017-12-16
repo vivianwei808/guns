@@ -47,7 +47,7 @@ public class ToolUtil {
     /**
      * 获取异常的具体信息
      *
-     * @author fengshuonan
+     * @author wangwei
      * @Date 2017/3/30 9:21
      * @version 2.0
      */
@@ -67,7 +67,7 @@ public class ToolUtil {
 
     /**
      * @Description 主键id
-     * @author fengshuonan
+     * @author wangwei
      */
     public static String getUid() {
         return getRandomNum();
@@ -75,7 +75,7 @@ public class ToolUtil {
 
     /**
      * @Description 随机数字
-     * @author fengshuonan
+     * @author wangwei
      */
     public static String getRandomNum() {
         return Calendar.getInstance().getTimeInMillis() + generateCellPhoneValNum();
@@ -83,7 +83,7 @@ public class ToolUtil {
 
     /**
      * @Description 获取电话号码
-     * @author fengshuonan
+     * @author wangwei
      */
     public static String generateCellPhoneValNum() {
         String[] beforeShuffle = new String[]{"1", "2", "3", "4", "5", "6",

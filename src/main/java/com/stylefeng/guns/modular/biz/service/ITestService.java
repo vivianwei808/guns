@@ -3,7 +3,7 @@ package com.stylefeng.guns.modular.biz.service;
 /**
  * 测试多数据源的服务
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-06-23 23:01
  */
 public interface ITestService {

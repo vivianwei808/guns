@@ -1,7 +1,7 @@
-package com.stylefeng.guns.modular.system.warpper;
+package com.stylefeng.guns.modular.system.wrapper;
 
 import com.stylefeng.guns.common.constant.factory.ConstantFactory;
-import com.stylefeng.guns.common.warpper.BaseControllerWarpper;
+import com.stylefeng.guns.common.warpper.BaseControllerWrapper;
 import com.stylefeng.guns.core.util.Contrast;
 import com.stylefeng.guns.core.util.ToolUtil;
 
@@ -10,12 +10,12 @@ import java.util.Map;
 /**
  * 日志列表的包装类
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017年4月5日22:56:24
  */
-public class LogWarpper extends BaseControllerWarpper {
+public class LogWrapper extends BaseControllerWrapper {
 
-    public LogWarpper(Object list) {
+    public LogWrapper(Object list) {
         super(list);
     }
 

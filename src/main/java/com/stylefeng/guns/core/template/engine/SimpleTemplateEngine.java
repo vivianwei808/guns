@@ -6,7 +6,7 @@ import com.stylefeng.guns.core.util.ToolUtil;
 /**
  * 通用的模板生成引擎
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-05-09 20:32
  */
 public class SimpleTemplateEngine extends GunsTemplateEngine {
@@ -57,6 +57,14 @@ public class SimpleTemplateEngine extends GunsTemplateEngine {
                 ToolUtil.firstLetterToUpper(super.getContextConfig().getBizEnName()));
         generateFile("gunsTemplate/Controller.java.btl", controllerPath);
         System.out.println("生成控制器成功!");
+    }
+
+    @Override
+    protected void generateWrapper() {
+        String wrapperPath = ToolUtil.format(super.getContextConfig().getProjectPath() + super.getWrapperConfig().getWrapperPathTemplate(),
+                ToolUtil.firstLetterToUpper(super.getContextConfig().getBizEnName()));
+        generateFile("gunsTemplate/Wrapper.java.btl", wrapperPath);
+        System.out.println("生成Wrapper成功!");
     }
 
     @Override

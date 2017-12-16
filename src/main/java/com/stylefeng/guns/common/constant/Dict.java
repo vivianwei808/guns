@@ -3,7 +3,7 @@ package com.stylefeng.guns.common.constant;
 /**
  * 字典常量
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017年5月16日21:44:56
  */
 public interface Dict {
@@ -43,4 +43,18 @@ public interface Dict {
      */
     String NoticeMap = "NoticeMap";
 
+    /**
+     * 用户管理
+     */
+    String UserGroupMap = "UserGroupMap";
+
+    /**
+     * 卡管理
+     */
+    String CardMap = "CardMap";
+
+    /**
+     * 订单管理
+     */
+    String OrderMap = "OrderMap";
 }

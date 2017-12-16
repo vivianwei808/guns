@@ -7,12 +7,15 @@ import ${import};
 /**
  * ${context.bizChName}控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date ${tool.currentTime()}
  */
 @Controller
 @RequestMapping("/${context.bizEnName}")
 public class ${context.bizEnBigName}Controller extends BaseController {
+
+    @Resource
+    ${context.bizEnBigName}Mapper ${context.bizEnName}Mapper;
 
     private String PREFIX = "/${context.moduleName}/${context.bizEnName}/";
 
@@ -35,6 +38,7 @@ public class ${context.bizEnBigName}Controller extends BaseController {
     /**
      * 跳转到修改${context.bizChName}
      */
+    @Permission
     @RequestMapping("/${context.bizEnName}_update/{${context.bizEnName}Id}")
     public String ${context.bizEnName}Update(@PathVariable Integer ${context.bizEnName}Id, Model model) {
         return PREFIX + "${context.bizEnName}_edit.html";
@@ -43,24 +47,30 @@ public class ${context.bizEnBigName}Controller extends BaseController {
     /**
      * 获取${context.bizChName}列表
      */
+    @Permission
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
-        return null;
+        List<Map<String, Object>> list = ${context.bizEnName}Mapper.list(condition);
+        return super.warpObject(new ${context.bizEnBigName}Warpper(list));
     }
 
     /**
      * 新增${context.bizChName}
      */
+    @Permission
     @RequestMapping(value = "/add")
     @ResponseBody
-    public Object add() {
+    @BussinessLog(value = "${context.bizChName}新增", key = "id", dict = Dict.${context.bizEnBigName}Dict)
+    public Object add(@Valid ${context.bizEnBigName} ${context.bizEnName}, BindingResult result) {
+
         return super.SUCCESS_TIP;
     }
 
     /**
      * 删除${context.bizChName}
      */
+     @Permission
     @RequestMapping(value = "/delete")
     @ResponseBody
     public Object delete() {
@@ -71,6 +81,7 @@ public class ${context.bizEnBigName}Controller extends BaseController {
     /**
      * 修改${context.bizChName}
      */
+     @Permission
     @RequestMapping(value = "/update")
     @ResponseBody
     public Object update() {

@@ -16,7 +16,7 @@ import java.util.Properties;
 /**
  * guns项目模板生成 引擎
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-05-07 22:15
  */
 public abstract class GunsTemplateEngine extends AbstractTemplateEngine {
@@ -102,6 +102,7 @@ public abstract class GunsTemplateEngine extends AbstractTemplateEngine {
         }
 
     }
+    protected abstract void generateWrapper();
 
     protected abstract void generatePageEditHtml();
 

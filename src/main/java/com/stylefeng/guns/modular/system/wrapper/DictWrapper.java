@@ -1,7 +1,7 @@
-package com.stylefeng.guns.modular.system.warpper;
+package com.stylefeng.guns.modular.system.wrapper;
 
 import com.stylefeng.guns.common.constant.factory.ConstantFactory;
-import com.stylefeng.guns.common.warpper.BaseControllerWarpper;
+import com.stylefeng.guns.common.warpper.BaseControllerWrapper;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.common.persistence.model.Dict;
 
@@ -11,12 +11,12 @@ import java.util.Map;
 /**
  * 字典列表的包装
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017年4月25日 18:10:31
  */
-public class DictWarpper extends BaseControllerWarpper {
+public class DictWrapper extends BaseControllerWrapper {
 
-    public DictWarpper(Object list) {
+    public DictWrapper(Object list) {
         super(list);
     }
 

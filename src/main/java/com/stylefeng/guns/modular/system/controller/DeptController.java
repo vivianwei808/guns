@@ -13,7 +13,7 @@ import com.stylefeng.guns.common.persistence.model.Dept;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.service.IDeptService;
-import com.stylefeng.guns.modular.system.warpper.DeptWarpper;
+import com.stylefeng.guns.modular.system.wrapper.DeptWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * 部门控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017年2月17日20:27:22
  */
 @Controller
@@ -105,7 +105,7 @@ public class DeptController extends BaseController {
     @ResponseBody
     public Object list(String condition) {
         List<Map<String, Object>> list = deptMapper.list(condition);
-        return super.warpObject(new DeptWarpper(list));
+        return super.warpObject(new DeptWrapper(list));
     }
 
     /**

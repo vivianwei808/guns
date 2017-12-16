@@ -20,7 +20,7 @@ import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.util.Convert;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.service.IRoleService;
-import com.stylefeng.guns.modular.system.warpper.RoleWarpper;
+import com.stylefeng.guns.modular.system.wrapper.RoleWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -37,7 +37,7 @@ import java.util.Map;
 /**
  * 角色控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017年2月12日21:59:14
  */
 @Controller
@@ -110,7 +110,7 @@ public class RoleController extends BaseController {
     @ResponseBody
     public Object list(@RequestParam(required = false) String roleName) {
         List<Map<String, Object>> roles = roleMapper.selectRoles(super.getPara("roleName"));
-        return super.warpObject(new RoleWarpper(roles));
+        return super.warpObject(new RoleWrapper(roles));
     }
 
     /**

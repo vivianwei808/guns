@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * 测试Guns模板引擎
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-05-09 20:27
  */
 public class TemplateGenerator {

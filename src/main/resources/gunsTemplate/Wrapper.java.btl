@@ -1,0 +1,19 @@
+package ${dao.packageName};
+
+/**
+ * ${context.bizChName}Dao
+ *
+ * @author wangwei
+ * @Date ${tool.currentTime()}
+ */
+public class ${context.bizEnBigName}Wrapper extends BaseControllerWrapper{
+
+    public ${context.bizEnBigName}Wrapper(Object list) {
+        super(list);
+    }
+
+    @Override
+    public void warpTheMap(Map<String, Object> map) {
+    }
+
+}

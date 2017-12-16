@@ -17,7 +17,7 @@ import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.support.BeanKit;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.service.IMenuService;
-import com.stylefeng.guns.modular.system.warpper.MenuWarpper;
+import com.stylefeng.guns.modular.system.wrapper.MenuWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * 菜单控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017年2月12日21:59:14
  */
 @Controller
@@ -121,7 +121,7 @@ public class MenuController extends BaseController {
     @ResponseBody
     public Object list(@RequestParam(required = false) String menuName, @RequestParam(required = false) String level) {
         List<Map<String, Object>> menus = menuMapper.selectMenus(menuName, level);
-        return super.warpObject(new MenuWarpper(menus));
+        return super.warpObject(new MenuWrapper(menus));
     }
 
     /**

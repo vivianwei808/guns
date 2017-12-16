@@ -8,7 +8,7 @@ import com.stylefeng.guns.common.exception.BussinessException;
 /**
  * 字典的创建工厂
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-05-06 15:12
  */
 public class DictMapFactory {

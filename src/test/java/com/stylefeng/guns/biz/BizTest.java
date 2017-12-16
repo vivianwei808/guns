@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 业务测试
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-06-23 23:12
  */
 public class BizTest extends BaseJunit {

@@ -1,7 +1,7 @@
-package com.stylefeng.guns.modular.system.warpper;
+package com.stylefeng.guns.modular.system.wrapper;
 
 import com.stylefeng.guns.common.constant.factory.ConstantFactory;
-import com.stylefeng.guns.common.warpper.BaseControllerWarpper;
+import com.stylefeng.guns.common.warpper.BaseControllerWrapper;
 
 import java.util.List;
 import java.util.Map;
@@ -9,12 +9,12 @@ import java.util.Map;
 /**
  * 角色列表的包装类
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017年2月19日10:59:02
  */
-public class RoleWarpper extends BaseControllerWarpper {
+public class RoleWrapper extends BaseControllerWrapper {
 
-    public RoleWarpper(List<Map<String, Object>> list) {
+    public RoleWrapper(List<Map<String, Object>> list) {
         super(list);
     }
 

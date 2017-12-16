@@ -2,7 +2,7 @@ package com.stylefeng.guns.common.exception;
 
 /**
  * @Description 业务异常的封装
- * @author fengshuonan
+ * @author wangwei
  * @date 2016年11月12日 下午5:05:10
  */
 @SuppressWarnings("serial")

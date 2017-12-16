@@ -3,7 +3,7 @@ package com.stylefeng.guns.modular.system.service;
 /**
  * 部门服务
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-04-27 17:00
  */
 public interface IDeptService {

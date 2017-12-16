@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 控制器模板生成的配置
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-05-07 22:12
  */
 public class ControllerConfig {
@@ -25,6 +25,9 @@ public class ControllerConfig {
         imports.add("org.springframework.web.bind.annotation.ResponseBody");
         imports.add("org.springframework.ui.Model");
         imports.add("org.springframework.web.bind.annotation.PathVariable");
+
+        imports.add("com.stylefeng.guns.modular."+contextConfig.getModuleName()+".warpper."+contextConfig.getBizEnBigName()+"Wrapper");
+
         this.imports = imports;
         this.packageName = "com.stylefeng.guns.modular." + contextConfig.getModuleName() + ".controller";
         this.controllerPathTemplate = "\\src\\main\\java\\com\\stylefeng\\guns\\modular\\" + contextConfig.getModuleName() + "\\controller\\{}Controller.java";

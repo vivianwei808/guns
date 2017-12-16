@@ -11,7 +11,7 @@ import com.stylefeng.guns.common.persistence.dao.LoginLogMapper;
 import com.stylefeng.guns.common.persistence.dao.OperationLogMapper;
 import com.stylefeng.guns.common.persistence.model.OperationLog;
 import com.stylefeng.guns.core.support.BeanKit;
-import com.stylefeng.guns.modular.system.warpper.LogWarpper;
+import com.stylefeng.guns.modular.system.wrapper.LogWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * 日志管理的控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017年4月5日 19:45:36
  */
 @Controller
@@ -70,7 +70,7 @@ public class LogController extends BaseController {
     public Object detail(@PathVariable Integer id) {
         OperationLog operationLog = operationLogMapper.selectByPrimaryKey(id);
         Map<String, Object> stringObjectMap = BeanKit.beanToMap(operationLog);
-        return super.warpObject(new LogWarpper(stringObjectMap));
+        return super.warpObject(new LogWrapper(stringObjectMap));
     }
 
     /**

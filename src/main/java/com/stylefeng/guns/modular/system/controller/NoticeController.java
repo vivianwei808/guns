@@ -11,7 +11,7 @@ import com.stylefeng.guns.common.persistence.model.Notice;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.shiro.ShiroKit;
 import com.stylefeng.guns.core.util.ToolUtil;
-import com.stylefeng.guns.modular.system.warpper.NoticeWrapper;
+import com.stylefeng.guns.modular.system.wrapper.NoticeWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * 通知控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017-05-09 23:02:21
  */
 @Controller

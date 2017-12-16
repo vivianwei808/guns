@@ -1,7 +1,7 @@
-package com.stylefeng.guns.modular.system.warpper;
+package com.stylefeng.guns.modular.system.wrapper;
 
 import com.stylefeng.guns.common.constant.factory.ConstantFactory;
-import com.stylefeng.guns.common.warpper.BaseControllerWarpper;
+import com.stylefeng.guns.common.warpper.BaseControllerWrapper;
 
 import java.util.List;
 import java.util.Map;
@@ -9,12 +9,12 @@ import java.util.Map;
 /**
  * 用户管理的包装类
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017年2月13日 下午10:47:03
  */
-public class UserWarpper extends BaseControllerWarpper {
+public class UserWrapper extends BaseControllerWrapper {
 
-    public UserWarpper(List<Map<String, Object>> list) {
+    public UserWrapper(List<Map<String, Object>> list) {
         super(list);
     }
 

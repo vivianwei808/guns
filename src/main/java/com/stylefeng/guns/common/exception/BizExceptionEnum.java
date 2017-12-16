@@ -2,7 +2,7 @@ package com.stylefeng.guns.common.exception;
 
 /**
  * @Description 所有业务异常的枚举
- * @author fengshuonan
+ * @author wangwei
  * @date 2016年11月12日 下午5:04:51
  */
 public enum BizExceptionEnum {

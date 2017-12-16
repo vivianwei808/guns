@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * 字典服务测试
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017-04-27 17:05
  */
 public class DictTest extends BaseJunit {

@@ -3,7 +3,7 @@ package com.stylefeng.guns.common.constant.tips;
 /**
  * 返回给前台的成功提示
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2016年11月12日 下午5:05:22
  */
 public class SuccessTip extends Tip{

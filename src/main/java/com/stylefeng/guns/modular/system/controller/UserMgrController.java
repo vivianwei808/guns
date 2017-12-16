@@ -20,7 +20,7 @@ import com.stylefeng.guns.core.shiro.ShiroUser;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.factory.UserFactory;
 import com.stylefeng.guns.modular.system.transfer.UserDto;
-import com.stylefeng.guns.modular.system.warpper.UserWarpper;
+import com.stylefeng.guns.modular.system.wrapper.UserWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -39,7 +39,7 @@ import java.util.UUID;
 /**
  * 系统管理员控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017年1月11日 下午1:08:17
  */
 @Controller
@@ -159,7 +159,7 @@ public class UserMgrController extends BaseController {
     public Object list(@RequestParam(required = false) String name, @RequestParam(required = false) String beginTime, @RequestParam(required = false) String endTime, @RequestParam(required = false) Integer deptid) {
         DataScope dataScope = new DataScope(ShiroKit.getDeptDataScope());
         List<Map<String, Object>> users = userMapper.selectUsers(dataScope, name, beginTime, endTime, deptid);
-        return new UserWarpper(users).warp();
+        return new UserWrapper(users).warp();
     }
 
     /**

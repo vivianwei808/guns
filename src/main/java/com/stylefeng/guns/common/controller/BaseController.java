@@ -4,7 +4,7 @@ import com.stylefeng.guns.common.constant.state.Order;
 import com.stylefeng.guns.common.constant.tips.SuccessTip;
 import com.stylefeng.guns.common.page.PageInfoBT;
 import com.stylefeng.guns.common.page.PageReq;
-import com.stylefeng.guns.common.warpper.BaseControllerWarpper;
+import com.stylefeng.guns.common.warpper.BaseControllerWrapper;
 import com.stylefeng.guns.core.support.HttpKit;
 import com.stylefeng.guns.core.util.FileUtil;
 import com.stylefeng.guns.core.util.ToolUtil;
@@ -87,7 +87,7 @@ public class BaseController {
     /**
      * 包装一个list，让list增加额外属性
      */
-    protected Object warpObject(BaseControllerWarpper warpper) {
+    protected Object warpObject(BaseControllerWrapper warpper) {
         return warpper.warp();
     }
 
@@ -108,7 +108,7 @@ public class BaseController {
     /**
      * 返回前台文件流
      *
-     * @author fengshuonan
+     * @author wangwei
      * @date 2017年2月28日 下午2:53:19
      */
     protected ResponseEntity<byte[]> renderFile(String fileName, String filePath) {
@@ -119,7 +119,7 @@ public class BaseController {
     /**
      * 返回前台文件流
      *
-     * @author fengshuonan
+     * @author wangwei
      * @date 2017年2月28日 下午2:53:19
      */
     protected ResponseEntity<byte[]> renderFile(String fileName, byte[] fileBytes) {

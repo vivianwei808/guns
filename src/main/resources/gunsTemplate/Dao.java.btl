@@ -3,10 +3,11 @@ package ${dao.packageName};
 /**
  * ${context.bizChName}Dao
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date ${tool.currentTime()}
  */
-public interface ${context.bizEnBigName}Dao {
+public interface ${context.bizEnBigName}Dao extends Mapper<${context.bizEnBigName}>{
 
+    List<Map<String, Object>> list(@Param("condition") String condition);
 
 }

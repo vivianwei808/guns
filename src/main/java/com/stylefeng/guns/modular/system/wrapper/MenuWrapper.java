@@ -1,8 +1,8 @@
-package com.stylefeng.guns.modular.system.warpper;
+package com.stylefeng.guns.modular.system.wrapper;
 
 import com.stylefeng.guns.common.constant.factory.ConstantFactory;
 import com.stylefeng.guns.common.constant.state.IsMenu;
-import com.stylefeng.guns.common.warpper.BaseControllerWarpper;
+import com.stylefeng.guns.common.warpper.BaseControllerWrapper;
 
 import java.util.List;
 import java.util.Map;
@@ -10,12 +10,12 @@ import java.util.Map;
 /**
  * 菜单列表的包装类
  *
- * @author fengshuonan
+ * @author wangwei
  * @date 2017年2月19日15:07:29
  */
-public class MenuWarpper extends BaseControllerWarpper {
+public class MenuWrapper extends BaseControllerWrapper {
 
-    public MenuWarpper(List<Map<String, Object>> list) {
+    public MenuWrapper(List<Map<String, Object>> list) {
         super(list);
     }
 

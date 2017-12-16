@@ -12,7 +12,7 @@ import com.stylefeng.guns.common.persistence.model.Dict;
 import com.stylefeng.guns.core.log.LogObjectHolder;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.service.IDictService;
-import com.stylefeng.guns.modular.system.warpper.DictWarpper;
+import com.stylefeng.guns.modular.system.wrapper.DictWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * 字典控制器
  *
- * @author fengshuonan
+ * @author wangwei
  * @Date 2017年4月26日 12:55:31
  */
 @Controller
@@ -97,7 +97,7 @@ public class DictController extends BaseController {
     @ResponseBody
     public Object list(String condition) {
         List<Map<String, Object>> list = dictMapper.list(condition);
-        return super.warpObject(new DictWarpper(list));
+        return super.warpObject(new DictWrapper(list));
     }
 
     /**
