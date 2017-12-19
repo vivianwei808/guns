@@ -1,6 +1,7 @@
 package com.stylefeng.guns.core.template.config;
 
 import com.stylefeng.guns.core.util.ToolUtil;
+import lombok.Data;
 
 /**
  * 全局配置
@@ -8,6 +9,7 @@ import com.stylefeng.guns.core.util.ToolUtil;
  * @author wangwei
  * @date 2017-05-08 20:21
  */
+@Data
 public class ContextConfig {
 
     private String projectPath = "D:\\ideaSpace\\guns";//模板输出的项目目录
@@ -24,6 +26,7 @@ public class ContextConfig {
     private Boolean infoJsSwitch = true;        //详情页面js
     private Boolean daoSwitch = true;           //dao
     private Boolean serviceSwitch = true;       //service
+    private Boolean wrapperSwitch = true;       //wrapper
 
     public String getBizEnBigName() {
         return bizEnBigName;
@@ -129,4 +132,5 @@ public class ContextConfig {
     public void setServiceSwitch(Boolean serviceSwitch) {
         this.serviceSwitch = serviceSwitch;
     }
+
 }

@@ -1,3 +1,7 @@
+todo 结构划分 maven结构
+todo 生成代码加强
+todo 完善日志
+
 # Guns V2.5
 
 新版Guns基于SpringBoot全面升级,完美整合springmvc + shiro + **MyBatis 通用 Mapper** + **分页插件 PageHelper** + beetl!

@@ -15,7 +15,7 @@ import ${import};
 public class ${context.bizEnBigName}Controller extends BaseController {
 
     @Resource
-    ${context.bizEnBigName}Mapper ${context.bizEnName}Mapper;
+    ${context.bizEnBigName}Dao ${context.bizEnName}Mapper;
 
     private String PREFIX = "/${context.moduleName}/${context.bizEnName}/";
 
@@ -47,33 +47,59 @@ public class ${context.bizEnBigName}Controller extends BaseController {
     /**
      * 获取${context.bizChName}列表
      */
+    @ApiOperation("获取${context.bizChName}列表")
     @Permission
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
         List<Map<String, Object>> list = ${context.bizEnName}Mapper.list(condition);
-        return super.warpObject(new ${context.bizEnBigName}Warpper(list));
+        return super.warpObject(new ${context.bizEnBigName}Wrapper(list));
     }
 
     /**
      * 新增${context.bizChName}
      */
+    @ApiOperation("新增${context.bizChName}")
     @Permission
     @RequestMapping(value = "/add")
     @ResponseBody
-    @BussinessLog(value = "${context.bizChName}新增", key = "id", dict = Dict.${context.bizEnBigName}Dict)
-    public Object add(@Valid ${context.bizEnBigName} ${context.bizEnName}, BindingResult result) {
-
-        return super.SUCCESS_TIP;
+    @BussinessLog(value = "${context.bizChName}新增")
+    public Object add(@Valid ${context.bizEnBigName}Entity ${context.bizEnName}, BindingResult result) {
+        if (result.hasErrors()) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        if (ToolUtil.isOneEmpty(....)) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        try {
+            ${context.bizEnName}Mapper.insert(${context.bizEnName});
+        }catch (DuplicateKeyException de){
+            de.printStackTrace();
+            throw new BussinessException(BizExceptionEnum.DUPLICATE_KEY);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BussinessException(BizExceptionEnum.SYSTEM_ERROR);
+        }
+        return SUCCESS_TIP;
     }
 
     /**
      * 删除${context.bizChName}
      */
-     @Permission
+    @Permission
     @RequestMapping(value = "/delete")
     @ResponseBody
-    public Object delete() {
+    @BussinessLog(value = "${context.bizChName}删除")
+    public Object delete(@RequestParam Integer ${context.bizEnName}Id) {
+        if (ToolUtil.isEmpty(${context.bizEnName}Id)) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        try {
+            ${context.bizEnName}Mapper.deleteByPrimaryKey(${context.bizEnName}Id);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BussinessException(BizExceptionEnum.SYSTEM_ERROR);
+        }
         return SUCCESS_TIP;
     }
 
@@ -81,19 +107,40 @@ public class ${context.bizEnBigName}Controller extends BaseController {
     /**
      * 修改${context.bizChName}
      */
-     @Permission
+    @ApiOperation("修改${context.bizChName}")
+    @Permission
     @RequestMapping(value = "/update")
     @ResponseBody
-    public Object update() {
-        return super.SUCCESS_TIP;
+    @BussinessLog(value = "${context.bizChName}修改")
+    public Object update(@Valid ${context.bizEnBigName}Entity ${context.bizEnName}, BindingResult result) {
+        if (result.hasErrors()) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        try {
+            ${context.bizEnName}Mapper.updateByPrimaryKeySelective(${context.bizEnName});
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BussinessException(BizExceptionEnum.SYSTEM_ERROR);
+        }
+        return SUCCESS_TIP;
     }
 
     /**
      * ${context.bizChName}详情
      */
+    @ApiOperation("${context.bizChName}详情")
     @RequestMapping(value = "/detail")
     @ResponseBody
-    public Object detail() {
-        return null;
+    public Object detail(@RequestParam Integer ${context.bizEnName}Id) {
+        if (ToolUtil.isEmpty(${context.bizEnName}Id)) {
+            throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+        }
+        try {
+            ${context.bizEnName}Mapper.selectByPrimaryKey(${context.bizEnName}Id);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new BussinessException(BizExceptionEnum.SYSTEM_ERROR);
+        }
+        return SUCCESS_TIP;
     }
 }

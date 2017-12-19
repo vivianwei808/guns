@@ -186,6 +186,7 @@ public class DateUtil {
 		return DateFormatUtils.format(date, pattern);
 	}
 
+
 	/**
 	 * 把日期转换为Timestamp
 	 *

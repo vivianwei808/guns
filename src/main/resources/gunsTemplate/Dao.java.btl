@@ -1,12 +1,16 @@
 package ${dao.packageName};
 
+<% for(import in dao.imports!){ %>
+import ${import};
+<% } %>
+
 /**
  * ${context.bizChName}Dao
  *
  * @author wangwei
  * @Date ${tool.currentTime()}
  */
-public interface ${context.bizEnBigName}Dao extends Mapper<${context.bizEnBigName}>{
+public interface ${context.bizEnBigName}Dao extends Mapper<${context.bizEnBigName}Entity>{
 
     List<Map<String, Object>> list(@Param("condition") String condition);
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.common.persistence.dao.OperationDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.front.entity.Operation">
+        <id column="id" property="id" />
+        <result column="uid" property="uid" />
+        <result column="user_name" property="userName" />
+        <result column="platform_url" property="platformUrl" />
+        <result column="order_record" property="orderRecord" />
+        <result column="platform" property="platform" />
+        <result column="operation_type" property="operationType" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id ,uid ,user_name ,platform_url ,order_record ,platform ,operation_type ,create_time ,update_time
+    </sql>
+
+    <select id="list" resultType="map">
+        select * from user
+        <if test="condition != null and condition != ''">
+            where account like CONCAT('%',#{condition},'%')
+        </if>
+        order by update_time desc
+    </select>
+</mapper>

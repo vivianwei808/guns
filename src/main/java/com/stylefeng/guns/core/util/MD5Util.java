@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
  * MD5加密类（封装jdk自带的md5加密方法）
  *
  * @author wangwei
- * @date 2016年12月2日 下午4:14:22
+ * @date 2017年12月16日 下午4:14:22
  */
 public class MD5Util {
 

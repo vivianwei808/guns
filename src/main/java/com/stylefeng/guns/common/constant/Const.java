@@ -8,6 +8,10 @@ package com.stylefeng.guns.common.constant;
  */
 public interface Const {
 
+    String TOKEN_PWD = "XJH!123";
+
+    String DEFAULT_CILENT_PWD = "1a2b3c4d";
+
     /**
      * 系统默认的管理员密码
      */

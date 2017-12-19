@@ -40,7 +40,7 @@ public class CodeController extends BaseController {
     /**
      * 代码生成
      */
-    @ApiOperation("生成代码")
+//    @ApiOperation("生成代码")
     @RequestMapping(value = "/generate", method = RequestMethod.POST)
     @ResponseBody
     @Permission(Const.ADMIN_NAME)

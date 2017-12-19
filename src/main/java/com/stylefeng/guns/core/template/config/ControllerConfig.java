@@ -26,7 +26,23 @@ public class ControllerConfig {
         imports.add("org.springframework.ui.Model");
         imports.add("org.springframework.web.bind.annotation.PathVariable");
 
-        imports.add("com.stylefeng.guns.modular."+contextConfig.getModuleName()+".warpper."+contextConfig.getBizEnBigName()+"Wrapper");
+        imports.add("com.stylefeng.guns.modular."+"+contextConfig.getModuleName()+"+".dao."+"+contextConfig.getBizEnBigName()+"+"Dao");
+        imports.add("org.springframework.web.bind.annotation.RequestParam");
+        imports.add("com.stylefeng.guns.core.util.ToolUtil");
+        imports.add("org.springframework.dao.DuplicateKeyException");
+        imports.add("com.stylefeng.guns.common.exception.BizExceptionEnum");
+        imports.add("com.stylefeng.guns.common.exception.BussinessException");
+        imports.add("com.stylefeng.guns.modular."+contextConfig.getModuleName()+".entity."+contextConfig.getBizEnBigName()+"Entity");
+        imports.add("org.springframework.validation.BindingResult");
+        imports.add("javax.validation.Valid");
+        imports.add("com.stylefeng.guns.common.annotion.Permission");
+        imports.add("javax.annotation.Resource");
+        imports.add("java.util.List");
+        imports.add("java.util.Map");
+        imports.add("com.stylefeng.guns.modular."+contextConfig.getModuleName()+".wrapper."+contextConfig.getBizEnBigName()+"Wrapper");
+        imports.add("com.stylefeng.guns.common.annotion.log.BussinessLog");
+        imports.add("io.swagger.annotations.ApiOperation");
+
 
         this.imports = imports;
         this.packageName = "com.stylefeng.guns.modular." + contextConfig.getModuleName() + ".controller";

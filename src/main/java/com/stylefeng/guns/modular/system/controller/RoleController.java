@@ -21,6 +21,7 @@ import com.stylefeng.guns.core.util.Convert;
 import com.stylefeng.guns.core.util.ToolUtil;
 import com.stylefeng.guns.modular.system.service.IRoleService;
 import com.stylefeng.guns.modular.system.wrapper.RoleWrapper;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

@@ -46,15 +46,17 @@ public interface Dict {
     /**
      * 用户管理
      */
-    String UserGroupMap = "UserGroupMap";
-
-    /**
-     * 卡管理
-     */
-    String CardMap = "CardMap";
-
-    /**
-     * 订单管理
-     */
-    String OrderMap = "OrderMap";
+//    String UserBasicMap = "UserBasicMap";
+//    String IdCardMap = "IdCardMap";
+//    String OperationMap = "OperationMap";
+//    /**
+//     * 卡管理
+//     */
+//    String OpenCardMap = "OpenCardMap";
+//    String BindCardMap = "BindCardMap";
+//
+//    /**
+//     * 订单管理
+//     */
+//    String OrderMap = "OrderMap";
 }

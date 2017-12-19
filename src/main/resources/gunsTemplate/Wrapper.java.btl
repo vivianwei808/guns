@@ -1,4 +1,8 @@
-package ${dao.packageName};
+package ${wrapper.packageName};
+
+<% for(import in wrapper.imports!){ %>
+import ${import};
+<% } %>
 
 /**
  * ${context.bizChName}Dao

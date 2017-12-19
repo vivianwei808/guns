@@ -49,6 +49,7 @@ public abstract class GunsTemplateEngine extends AbstractTemplateEngine {
         template.binding("context", super.getContextConfig());
         template.binding("dao", super.getDaoConfig());
         template.binding("service", super.getServiceConfig());
+        template.binding("wrapper", super.getWrapperConfig());
     }
 
     public void generateFile(String template,String filePath){
@@ -99,6 +100,9 @@ public abstract class GunsTemplateEngine extends AbstractTemplateEngine {
         }
         if(super.contextConfig.getServiceSwitch()){
             generateService();
+        }
+        if(super.contextConfig.getWrapperSwitch()){
+            generateWrapper();
         }
 
     }

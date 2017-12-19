@@ -1,6 +1,8 @@
 package com.stylefeng.guns.common.persistence.model;
 
+import com.stylefeng.guns.common.constant.Const;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -13,6 +15,7 @@ import java.util.Date;
  * @since 2017-07-11
  */
 @Data
+@ToString
 public class User extends Base {
 
     private static final long serialVersionUID = 1L;
